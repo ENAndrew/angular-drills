@@ -1,4 +1,6 @@
 
+/* global angular */
+
 var app = angular.module('arrayApp');
 
 app.controller('arrayController', function($scope, arrayService){
