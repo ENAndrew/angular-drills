@@ -1,8 +1,18 @@
 <html ng-app="arrayApp">
 	<head>
-		<link rel="stylesheet" href="style.css"></link>
+		<link rel="stylesheet" href="style.css"/>
 	</head>
 	<body ng-controller="arrayController">
+            
+            <h1> hi </h1>
+            <div ng-repeat='friend in friendList'>
+                <ul>
+                    <li>Name: {{friend.name}}</li>
+                    <li>Email: {{friend.email}}</li>
+                    <li>Employment Date: {{friend.dateEmployed}}</li>
+                    <li>Phone No: {{friend.phone}}</li>
+                </ul>
+            </div>
 	
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 		<script src="app.js"></script>
