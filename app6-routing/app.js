@@ -6,7 +6,7 @@ app.config(function($stateProvider, $urlRouterProvider){
     
     $stateProvider
             .state('home', {
-                templateUrl: 'index.html',
+                templateUrl: 'homeTmpl.html',
                 url: '/'
             })
             .state('signUp', {
@@ -15,7 +15,13 @@ app.config(function($stateProvider, $urlRouterProvider){
             })
             .state('details', {
                 templateUrl: 'details.html',
-                url: '/details'
+                url: '/details',
+                controller: 'birdController',
+                resolve: {
+                    bird: function(birdService){
+                        return birdService.getBirds();
+                    }
+                }
             });
     
     $urlRouterProvider.otherwise('/');
