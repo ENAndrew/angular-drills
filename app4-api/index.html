@@ -1,7 +1,19 @@
 <html ng-app="apiApp">
-	<body>
+	<body ng-controller='apiController'>
 		
-				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+            <h2>There are many birds, here are some:</h2>
+            
+            <button type='button' ng-click='getBirds()'>Go Get Birds</button>
+            
+            <div ng-repeat='bird in allBirds'>
+                <ul>
+                    <li><h4>Common Name: {{bird.commonName}}</h4></li>
+                    <li>Scientific Name: {{bird.scientificName}}</li>
+                    <li>Family: {{bird.family}}</li>
+                </ul>
+            </div>
+            
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>
 		<script src="service.js"></script>
